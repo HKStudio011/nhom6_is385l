@@ -17,10 +17,11 @@
                 </div>
                 <div class="menu">
                     <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Trangchu.aspx">TRANG CHỦ</asp:HyperLink>
+                    <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/SanPham.aspx">SẢN PHẨM</asp:HyperLink>
                     <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Gioithieu.aspx">GIỚI THIỆU</asp:HyperLink>
-                    <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/Sachtiengviet.aspx">SẢN PHẨM</asp:HyperLink>
                     <asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl="~/Lienhe.aspx">LIÊN HỆ</asp:HyperLink>
                     <asp:TextBox ID="TextBox1" runat="server" PlaceHolder="Search..."></asp:TextBox>
+                    <asp:ImageButton ID="ImageButton1" ImageUrl="~/Images/search.jpg" runat="server" />
                 </div>
 
                 <div class="content">

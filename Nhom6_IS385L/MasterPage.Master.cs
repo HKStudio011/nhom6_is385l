@@ -12,11 +12,22 @@ namespace Nhom6_IS385L
         KetNoi kn = new KetNoi();
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (IsPostBack == false) 
-            {
-                this.DataList1.DataSource = kn.LayDuLieu("SELECT * FROM ");
+            if (IsPostBack) { return; }
+                this.DataList1.DataSource = kn.LayDuLieu("SELECT * FROM LOAIHANG");
                 this.DataList1.DataBind();
-            }
+
+        }
+
+        protected void LinkButton1_Click(object sender, EventArgs e)
+        {
+            string ma = ((LinkButton)sender).CommandArgument.ToString();
+            Context.Items["ma"]= ma;
+            Server.Transfer("SanPham.aspx");
+        }
+
+        protected void Login1_Authenticate(object sender, AuthenticateEventArgs e)
+        {
+
         }
     }
 }
