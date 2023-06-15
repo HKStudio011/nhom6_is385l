@@ -1,0 +1,65 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="Nhom6_IS385L.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="StyleMaster.css" rel="stylesheet" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <div class="container">
+                <div class="banner">
+                </div>
+                <div class="menu">
+                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Trangchu.aspx">TRANG CHỦ</asp:HyperLink>
+                    <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Gioithieu.aspx">GIỚI THIỆU</asp:HyperLink>
+                    <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/Sachtiengviet.aspx">SẢN PHẨM</asp:HyperLink>
+                    <asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl="~/Lienhe.aspx">LIÊN HỆ</asp:HyperLink>
+                    <asp:TextBox ID="TextBox1" runat="server" PlaceHolder="Search..."></asp:TextBox>
+                </div>
+
+                <div class="content">
+                    <div class="leftside">
+                        <h3>Danh Mục</h3>
+                        <asp:DataList ID="DataList1" runat="server">
+                            <ItemTemplate>
+                                <asp:LinkButton ID="LinkButton1" runat="server" Text='<%# Eval("TenLoai")%>'
+                                    CommandArgument='<%# Eval("MaLoai") %>' OnClick="LinkButton1_Click">
+                                </asp:LinkButton>
+                            </ItemTemplate>
+                        </asp:DataList>
+                    </div>
+                    <div class="centerside">
+                        <div class="day">
+                            <asp:Label ID="Label" runat="server" Text="Label"></asp:Label>
+                        </div>
+                        <div class="subcontent">
+                            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                            </asp:ContentPlaceHolder>
+                        </div>
+                    </div>
+                    <div class="rightside">
+                        <div>
+                            <asp:Login ID="Login1" runat="server" OnAuthenticate="Login1_Authenticate"></asp:Login>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer">
+                    <h5>TỔNG ĐÀI HỖ TRỢ MIỄN PHÍ
+                    </h5>
+                    <h5>CSKH: 1800.6789
+                    </h5>
+                    <h5>Email: cskh@nhom6.com
+                    </h5>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
