@@ -9,7 +9,7 @@ namespace Nhom6_IS385L
 {
     public class KetNoi
     {
-        string path = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\KTTMDT\Nhom6_IS385L\Nhom6_IS385L\App_Data\QLBH.mdf;Integrated Security=True";
+        string path = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\QLBH.mdf;Integrated Security=True";
         SqlConnection con ;
         private void TaoKetNoi()
         {
